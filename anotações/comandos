@@ -1,0 +1,20 @@
+Criando banco de dados{
+   create database cadastro; 
+}
+
+
+Criando Tabela{
+    use cadastro; // é necessário selecionar o banco de dados, ou usar esse comando, colocando o curso em cadastro
+    create table pessoas(
+        nome varchar(30),
+        idade tinyint,
+        sexo char(1),
+        peso float,
+        altura float,
+        nacionalidade varchar(20)
+    );
+}
+
+Descrever tabelas{
+    descibre pessoas;
+}
