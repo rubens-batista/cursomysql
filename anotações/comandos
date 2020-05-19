@@ -1,9 +1,7 @@
 Criando banco de dados{
    create database cadastro; 
-}
 
-
-Criando Tabela{
+    Criando Tabela{
     use cadastro; // é necessário selecionar o banco de dados, ou usar esse comando, colocando o curso em cadastro
     create table pessoas(
         nome varchar(30),
@@ -13,8 +11,32 @@ Criando Tabela{
         altura float,
         nacionalidade varchar(20)
     );
+    }
+
+    Descrever tabelas{
+        descibre pessoas;
+    }
 }
 
-Descrever tabelas{
-    descibre pessoas;
+Apagar banco de dados{
+    drop database cadastro;
+}
+
+Criando um Banco de dados mais aprimorado{
+    create database cadastro
+    default character set utf8 #Define o tipo de caractere utilizado no banco de dados
+    default collate utf8_general_ci;
+}
+
+Criando Tabela mais aprimorada{
+    create table pessoas(
+    id int not null auto_increment, #criando um id de identificação com auto increment para gerar numeros automaticamentes.    
+    nome varchar(30) not null, #not null significa que tem que ser preenchido.
+    nascimento date,
+    sexo enum('M', 'F'),
+    peso decimal(5,2),
+    altura decimal(3,2),
+    nacionalidade varchar(20)
+    primary key(id) #adicionou id como chave primaria
+    ) default charset = utf8;
 }
