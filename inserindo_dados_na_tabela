@@ -1,0 +1,22 @@
+Inserindo valores{ #Comando DML = Data Manipulation Language
+    insert into pessoas
+    (nome, nascimento, sexo, peso, altura, nacionalidade)
+    values
+    ('Creusa', '1920-12-30', 'F', '50.2', '1.65', 'default' );
+
+    //Pode ser feito colocando id como default
+    insert into pessoas
+    (id, nome, nascimento, sexo, peso, altura, nacionalidade)
+    values
+    (default, 'Creusa', '1920-12-30', 'F', '50.2', '1.65', 'default' );
+
+    //outra maneira mais simples de fazer
+    insert into pessoas values
+    (default, 'Adalgiza', '1930-11-2', 'F', '63.2', '1.75', 'Irlanda' );
+
+    //adicionar varias ao mesmo tempo
+    
+
+    //Comando para verificar os valores dentro da tabela
+    select * from pessoas;
+}

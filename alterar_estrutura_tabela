@@ -1,0 +1,37 @@
+Alterar Estrutura de uma Tabela{ #Comando DDL
+    describe pessoas; # ou desc
+
+    adicionar coluna{
+        alter table pessoas
+        add column profissao varchar(10);
+
+        adicionar depois{
+            alter table pessoas
+            add column profissao varchar(10) after nome;
+        }
+        adicionar no primeiro{
+            alter table pessoas
+            add codigo int first;
+        }
+    }
+    eliminar coluna{
+        alter table pessoas
+        drop column profissao;
+    }
+    renomeando coluna{
+        alter table pessoas
+        change column profissao prof varchar(20);
+    }
+    renomeando tabela{
+        alter table pessoas
+        rename to gafanhotos;
+    }
+    adicionar primary key{
+        alter table cursos
+        add primary key (idcurso);
+    }
+
+    apagar tabela{
+        drop table if exists teste;
+    }
+}
