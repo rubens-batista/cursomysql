@@ -34,4 +34,4 @@ Alterar Estrutura de uma Tabela{ #Comando DDL
     apagar tabela{
         drop table if exists teste;
     }
-}
+}ç
