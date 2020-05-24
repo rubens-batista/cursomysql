@@ -1,0 +1,26 @@
+#{
+    create table cursos(
+    idcurso int(11) not null auto_increment,
+    nome varchar(30) not null,
+    descricao text,
+    carga int(10) unsigned,
+    totaaulas int(10) unique,
+    ano year(4),
+    primary key(idcurso)
+    )default charset = utf8;
+
+    describe cursos;
+
+    insert into cursos
+    (idcurso, nome, descricao, carga, totaulas, ano)
+    values
+    ('1', 'HTML4', 'Curso de HTML5', '40', '37', '2014'),
+    ('2', 'Algoritimos', 'Logica de Programacao', '20', '15', '2014'),
+    ('3', 'Photoshop', 'Dicas de Photoshop CC', '10', '8', '2014'),
+    ('4', 'PGP', 'Curso de PHP para iniciantes', '40', '20', '2010'),
+    ('5', 'Javar', 'Introduçao a Linguagem Java', '10', '29', '2000'),
+    ('6', 'MySQL', 'Banco de Dados MySQL', '30', '15', '2016'),
+    ('7', 'Word', 'Curso completo de Word', '40', '30', '2016');
+
+    select * from cursos;
+}

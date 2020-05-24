@@ -1,0 +1,17 @@
+#Acessar mysql usando mamp terminal
+    /Applications/MAMP/Library/bin/mysql --host=localhost -uroot -proot
+
+#verificar o banco de dados que está aberto
+    status;
+
+#acessar banco de dados
+    use cadastro; // exemplos com banco de dados cadastro criado.
+
+#verificar tabelas
+    show tables;
+
+#verifica estrutura da tabelas
+    desc ou describe gafanhotos; // exemplo com tabela criada dentro do banco de dados cadastro.
+
+#update
+    update cursos set nome = 'PHP' where idcurso = '4';
