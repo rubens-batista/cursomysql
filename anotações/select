@@ -1,0 +1,52 @@
+Select DQL
+
+#Ordenar por nome
+    select * from cursos
+    order by nome;
+
+#ordenar por nome de baixo para cima
+    select * from cursos
+    order by nome desc; // desc como parametro (tbm funciona asc)
+
+#mostrar colunas selecionandas
+    select nome, carga, ano from cursos
+    order by nome;
+
+#mais organizado
+    select ano, nome, carga from cursos
+    order by ano, nome;
+
+#filtrar linhas
+    select * from cursos
+    where ano = '2016'
+    order by nome;
+
+#filtrar linhas e colunas
+    select nome, descricao, carga from cursos
+    where ano = '2016'
+    order by nome;
+
+#filtrar por operadores relacionais básicos
+    select nome, descricao, ano from cursos
+    where ano != 2016 // <> tbm pode ser usado como diferente
+    order by ano;
+
+#filtrar operador between 
+    select nome, ano from cursos
+    where ano between 2014 and 2016
+    order by ano desc, nome asc;
+
+#filtrar operador in
+    select nome, descricao, ano from cursos
+    where ano in (2014, 2016)
+    order by ano;
+
+#filtrar operador and
+    select nome, carga, totaulas from cursos
+    where carga > 35 and totaulas < 30
+    order by ano;
+
+#filtrar operador or
+    select nome, carga, totaulas from cursos
+    where carga > 35 or totaulas < 30
+    order by ano;
