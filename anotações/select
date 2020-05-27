@@ -50,3 +50,50 @@ Select DQL
     select nome, carga, totaulas from cursos
     where carga > 35 or totaulas < 30
     order by ano;
+
+#operador like
+    % // caractere coringa, substitui nenhum, ou varios caracteres
+    select * from cursos
+    where nome like 'P%';
+
+#wildcards
+    #selecionar letra a no final
+        select * from cursos
+        where nome like '%a'; /// % usado antes da letra, faz com que filtre com final dos campos
+    #em qualquer local
+        select * from cursos
+        where nome like '%a%';
+    #em lugar nenhum
+        select * from cursos
+        where nome not like '%a%';
+
+    #usando _ ele filtra os que tem algum caractere no final
+        // _ tbm é um caractere coringa
+        select * from cursos
+        where nome like 'ph%p_';
+
+#distiguindo
+    // lista eliminando as repetições
+    select distinct nacionalidade from gafanhotos
+    order by nacionalidade;
+
+#agregações
+    //Conta
+        select count(*) from cursos;
+        ---
+        select count(*) from cursos 
+        where carga > 40;
+    //máximo
+        select max(carga) from cursos;
+        ---
+        select max(totaulas) from cursos
+        where ano = '2016';
+    //menor
+        select min(totaulas) from cursos
+        where ano = '2016';
+    //somar
+        select sum(totaulas) from cursos
+        where ano = '2016';
+    //tirar média
+        select avg(totaulas) from cursos
+        where ano = '2016';

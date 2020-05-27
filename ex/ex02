@@ -1,0 +1,5 @@
+"Uma lista com todos os dados de todos aqueles que nasceram entre 2000/jan/1 e 2015/dez/31"
+
+#resposta
+    select * from gafanhotos
+    where nascimento >= '2000-01-01' and nascimento <= '2015-12-31';
