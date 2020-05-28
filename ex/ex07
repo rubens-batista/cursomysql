@@ -1,1 +1,4 @@
 "Qual é a média de peso dos gafanhotos cadastrados?"
+
+#resposta
+    select avg(peso) from gafanhotos;

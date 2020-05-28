@@ -110,3 +110,9 @@ Select DQL
     group by ano
     having count(ano) >= 5 // sobe usar no campo que está fazendo
     order by count(*) desc;
+    -----
+    //Select dentro de select
+    select carga, count(*) from cursos
+    where ano > 2015
+    group by carga
+    having carga > (select avg(carga) from cursos);

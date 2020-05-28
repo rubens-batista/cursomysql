@@ -1,1 +1,6 @@
 Quantas mulheres tem mais de 1.90m de altura?
+
+#resposta
+    select  count(altura) from gafanhotos
+    where sexo like 'f'
+    and altura > 1.90;

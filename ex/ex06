@@ -1,1 +1,5 @@
 "Qual é a maior altura entre gafanhotos homens que moram no brasil?"
+
+#resposta
+    select max(altura) from gafanhotos
+    where sexo like 'm' and nacionalidade like 'Brasil';

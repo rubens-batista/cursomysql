@@ -1,1 +1,6 @@
 "Qual é o menor peso entre as mulheres que nasceram fora do Brasil e entre 1990/jan/01 e 2000/dez/31?"
+
+#resposta
+    select min(peso) from gafanhotos
+    where sexo like 'f' and nacionalidade != 'Brasil' 
+    and nascimento > '1990-01-01' and nascimento < '2000-12-31';

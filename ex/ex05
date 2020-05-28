@@ -1,1 +1,6 @@
 "Uma lista com o nome e nacionalidade de todos os homens que tem Silva no nome, não nasceram no Brasil e pesam menos de 100kg"
+
+#resposta
+    select nome, nacionalidade from gafanhotos
+    where sexo like 'm' and nome like '%silva%'
+    and nacionalidade != 'Brasil' and peso < 100;
