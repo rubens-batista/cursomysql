@@ -97,3 +97,16 @@ Select DQL
     //tirar média
         select avg(totaulas) from cursos
         where ano = '2016';
+
+#agrupando
+    select carga from cursos
+    group by carga;
+
+#agrupando e agregando
+    select carga, count(nome) from cursos
+    group by carga;
+    -----
+    select ano, count(*) from cursos
+    group by ano
+    having count(ano) >= 5 // sobe usar no campo que está fazendo
+    order by count(*) desc;
