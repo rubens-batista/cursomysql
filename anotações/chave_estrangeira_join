@@ -1,0 +1,35 @@
+Chave estrangeira e Join
+    Adicionar chave estranhgeira
+        alter table gafanhotos
+        add cursopreferido int;
+
+        alter table gafanhotos
+        add foreign key (cursopreferido)
+        references cursos(idcurso);
+
+    Adicionar curso a um aluno
+        update gafanhotos set cursopreferido = '6' where id = '1';
+    
+    Junção
+        inner join
+            select gafanhotos.nome, cursos.nome, cursos.ano
+            from gafanhotos join cursos # tambem pode ser inner join
+            on cursos.idcurso = gafanhotos.cursopreferido
+            order by gafanhotos.nome;
+
+            ///Simplificando com uso do 'as'
+
+            select g.nome, c.nome, c.ano
+            from gafanhotos as g join cursos as c
+            on c.idcurso = g.cursopreferido
+            order by g.nome;
+
+        outer join
+            tabela left
+                select g.nome, c.nome, c.ano
+                from gafanhotos as g left outer join cursos as c
+                on c.idcurso = g.cursopreferido;
+            tabela right
+                select g.nome, c.nome, c.ano
+                from gafanhotos as g right join cursos as c
+                on c.idcurso = g.cursopreferido;

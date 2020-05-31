@@ -1,4 +1,7 @@
 "Uma lista agrupada pela altura dos gafanhotos, mostrando quantas pessoas pesam mais de 100Kg e que estão acima da média de altura de todos os cadastros"
 
 #resposta
-    
+    select altura, count(*) from gafanhotos
+    where peso > 100
+    group by altura
+    having altura > (select avg(altura) from gafanhotos);

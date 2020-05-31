@@ -2,4 +2,7 @@
 ou seja, quantos são programadores, analistas..."
 
 #resposta
+    select profissao, count(*) from gafanhotos
+    group by profissao;
+
     

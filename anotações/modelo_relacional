@@ -1,0 +1,21 @@
+Diagrama E-R / Entidade e Relacioanmento / DER
+    Entidade = tabela
+    Atributos = dados que cada tabela tem
+    Relacioanemto = o que relaciona uma Entidade com outra Entidade. #CHAVE ESTRANGEIRA
+    Cardinalidade
+        1 para 1
+            #escolhe uma entidade dominante
+            #pega a chave primaria da outra entidade e joga para a entidade dominante
+            #precisa ter o mesmo tipo e espaço
+            #não precisa ter o mesmo nome
+        1 para n
+            #pega a chave primaria da entidade de 1 e joga para entidade de muitos.
+            #precisa ter o mesmo tipo e espaço
+            #não precisa ter o mesmo nome
+        n para n / muitos para muitos
+            #o relacionamento vira uma entidade
+            #relaciomanto tambem tem seus atributos
+            #criar 2 mines relacionamento de 1 para 1
+            //Fica valido a regra de 1 para muitos
+            #joga a chave de 1 para dentro da entidade de muitos
+        
